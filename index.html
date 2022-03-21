@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <img src="./rocket.png" alt="rocket" class="rocket">
+        <div class="text">
+            <h1>LOGIN</h1>
+        </div>
+        <form  class="form">
+            <div class="animated-input">
+                <input type="text" id="name" placeholder="Username">
+                <input type="password" id="pass" placeholder="Password">
+            </div>
+        </form>
+        <button onclick=clicked() class="btn" type="submit">LOGIN</button>
+    </div>
+
+    <script>
+        function clicked() {
+            var name = document.getElementById("name").value;
+            var pass = document.getElementById("pass").value;
+            // alert(name);
+            if(name.length < 4){
+                alert("Username too short");
+                return;
+            }
+            if(pass.length < 8){
+                alert("Password too short");
+                return;
+            }
+            if(name && pass ){  
+                alert("Logged In");
+            } else {
+                alert("Please Enter username and password");
+            }
+            
+        }
+    </script>
+</body>
+</html>
